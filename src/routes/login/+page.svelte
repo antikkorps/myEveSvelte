@@ -6,8 +6,17 @@
 <div class="text-column">
 	<h1>This is the login page</h1>
 
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
+	<form>
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" class="py-2"/>
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" class="py-2"/>
+		</div>
+
+		<button type="submit">Login</button>
+	</form>
 </div>
