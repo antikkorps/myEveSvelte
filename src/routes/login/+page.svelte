@@ -4,7 +4,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>This is the login page!</h1>
+	<h1>welcome to the login page!</h1>
 
 
 	<form>
