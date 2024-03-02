@@ -5,10 +5,27 @@ function isAuthenticated(): boolean {
 }
 
 // Function to handle user login
-function login(username: string, password: string): boolean {
-	// Validate the username and password
-	// If valid, generate and store a token for the user
-	// Return true if login successful, false otherwise
+async function handleLogin(username: string, password: string): boolean {
+	const response = await fetch('/login', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ username, password })
+	});
+
+	if (response.ok) {
+		// L'authentification a réussi, mettre à jour l'état d'authentification
+		// Rediriger l'utilisateur vers une page protégée ou effectuer une autre action appropriée
+
+		return true;
+		router.push('/dashboard');
+	} else {
+		// L'authentification a échoué, afficher un message d'erreur ou gérer d'autres cas d'utilisation
+		error = true;
+		return false;
+		router.push('/login');
+	}
 }
 
 // Function to handle user logout

@@ -1,6 +1,6 @@
 const apiConfig = {
 	// Your API configuration properties here
-	process.env.PUBLIC_BASE_URL,
+	PUBLIC_BASE_URL: process.env.PUBLIC_BASE_URL,
 	loginUrl: '/login'
 };
 

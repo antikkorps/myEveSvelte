@@ -13,7 +13,7 @@
 		<svelte:fragment slot="trail">(actions)</svelte:fragment>
 	</AppBar>
 	
-	<main>
+	<main class="bg-neutral-100 dark:bg-neutral-950">
 		<slot />
 	</main>
 
