@@ -1,6 +1,5 @@
 import type { Actions } from './$types';
 
-// Cette fonction est un exemple, vous devez la remplacer par votre propre logique d'authentification
 async function isUserAuthenticated(event) {
 	// TODO: implémenter la logique d'authentification
 	return false;
