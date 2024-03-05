@@ -1,5 +1,5 @@
 <script>
-	import Header from './Header.svelte';
+	import Header from "../components/Header.svelte"
 	import {AppBar} from '@skeletonlabs/skeleton'
 	import './styles.css';
 </script>

@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { Avatar } from '@skeletonlabs/skeleton';
-	import Toggle from './components/Toggle.svelte';
+	import Toggle from '../components/Toggle.svelte'
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
@@ -33,7 +33,7 @@
 	</nav>
 
 	<div class="flex flex-row justify-center">
-		<Avatar src="https://i.pravatar.cc/" class="w-10 h-10" />
+		<Avatar src="https://i.pravatar.cc/" class="w-9 h-9 relative top-2 right-6" />
 		<a href="https://github.com/sveltejs/kit">
 			<img src={github} alt="GitHub" class="z-10"/>
 		</a>

@@ -1,6 +1,6 @@
 <script lang='ts'>
 	
-	import Hero from '../Hero.svelte';
+	import Hero from '../components/Hero.svelte';
 	</script>
 
 <svelte:head>

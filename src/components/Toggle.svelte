@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
     let isChecked = false;
 
-function toggleTheme(event) {
-    isChecked = event.target.checked;
-    // Mettre à jour les classes en fonction de l'état du toggle
+function toggleTheme(event: InputEvent) {
+    let target = event.target as HTMLInputElement;
+    isChecked = target.checked;
+    // update the theme based on the checkbox state
     if (isChecked) {
         document.documentElement.classList.add('dark');
     } else {
