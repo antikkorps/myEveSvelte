@@ -20,6 +20,7 @@
                 // Set the session cookie
                 document.cookie = `session=${data.token}; path=/; HttpOnly`;
                 goto('/dashboard');
+                console.log(data.token);
             } else {
                 alert("Login failed");
             }
@@ -28,9 +29,10 @@
         }
     }
 
-	async function get(request: Request) {
+	async function getInfoOnAuth(request: Request) {
     if (isAuthenticated(request)) {
         // User is authenticated, allow access to protected resources
+        console.log("User is authenticated and allowed to access protected resources" + request);
     } else {
         // User is not authenticated, redirect to login page or show error message
     }
