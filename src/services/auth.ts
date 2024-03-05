@@ -1,11 +1,8 @@
 import apiConfig from '../configs/apiConfig';
-import { parse } from 'cookie';
 import { goto } from '$app/navigation';
 
 // Function to check if the user is authenticated
-export function isAuthenticated(request: Request): boolean {
-	const cookies = parse(request.headers.get('cookie') || '');
-	const token = cookies['token'];
+export function isAuthenticated(token: string): boolean {
 	return token !== undefined;
 }
 
@@ -22,10 +19,8 @@ export async function handleLogin(username: string, password: string): Promise<b
 	if (response.ok) {
 		const data = await response.json();
 		if (data.token) {
-			// Set the session cookie
-			document.cookie = `session=${data.token}; path=/; HttpOnly`;
 			goto('/dashboard');
-			return true;
+			return data.token;
 		}
 	}
 

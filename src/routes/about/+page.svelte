@@ -4,7 +4,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1 class="mainTitle">About this app</h1>
 
 	
 	<a href="/" class="card p-4">Link</a>

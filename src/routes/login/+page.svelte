@@ -43,10 +43,10 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>welcome to the login page!</h1>
+	<h1 class="mainTitle">welcome to the login page!</h1>
 
 
-	<form on:submit|preventDefault={submit}>
+	<form on:submit|preventDefault={submit} class="flex flex-col justify-center text-center mx-auto w-full md:w-1/2">
 		<div class="form-group">
 			<label for="username">Username</label>
 			<input bind:value={email} type="email" id="username" name="username" placeholder="email" class="py-2"/>

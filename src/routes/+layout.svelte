@@ -1,23 +1,28 @@
-<script>
+<script lang="ts">
 	import Header from "../components/Header.svelte"
-	import {AppBar} from '@skeletonlabs/skeleton'
 	import './styles.css';
+	import { setContext } from "svelte";
+	import {writable} from "svelte/store";
+
+	import type { LayoutData } from './$types';
+
+	export let data: LayoutData;
+
+	export let user = writable()
+	$: user.set(data)
+
+	setContext("user", user)
 </script>
 
 <div class="app dark:bg-base-200 bg-slate-200">
 	<Header />
-
-	<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
-		(title)
-		<svelte:fragment slot="trail">(actions)</svelte:fragment>
-	</AppBar>
 	
 	<main class="bg-neutral-100 dark:bg-neutral-950">
 		<slot />
 	</main>
 
 	<footer>
+		<h2>{user}</h2>
 	</footer>
 </div>
 

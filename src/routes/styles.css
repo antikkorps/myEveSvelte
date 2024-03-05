@@ -60,3 +60,9 @@ pre {
 	overflow-x: auto;
 	color: var(--color-text);
 }
+
+@layer components {
+	.mainTitle {
+		@apply text-4xl font-bold dark:text-white my-4;
+	}
+}

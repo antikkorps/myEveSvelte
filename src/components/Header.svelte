@@ -1,12 +1,14 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import { Avatar } from '@skeletonlabs/skeleton';
+	import {getContext} from "svelte"
 	import Toggle from '../components/Toggle.svelte'
 	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
-</script>
 
-<header>
+	const user = getContext('user');
+	
+	</script>
+
+<header class="mb-4">
 	<div class="w-10 h-10">
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
@@ -33,10 +35,18 @@
 	</nav>
 
 	<div class="flex flex-row justify-center">
-		<Avatar src="https://i.pravatar.cc/" class="w-9 h-9 relative top-2 right-6" />
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" class="z-10"/>
-		</a>
+		{#if user}
+		<div class="avatar">
+			<div class="w-12 h-12 mx-2 my-3 rounded-full">
+			  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="avatar"/>
+			</div>
+		</div>
+		{:else}
+		<button class="hover:text-primary hover:bg-neutral-100 mx-3 my-3">
+			<a href="/login" >Login</a>
+		</button>
+		
+		{/if}
 	</div>
 </header>
 
