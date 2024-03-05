@@ -3,8 +3,8 @@
 </script>
 
 <main>
-    <h1>Oups, something went wrong</h1>
-    <button><a href="/">Go back to Home</a></button>
+    <h1 class="text-4xl my-4">Oups, something went wrong</h1>
+    <button class="btn btn-primary text-white hover:text-primary hover:bg-neutral-100"><a href="/">Go back to Home</a></button>
 </main>
 
 <style>
@@ -16,21 +16,16 @@
         height: 100vh;
     }
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-
     button {
         padding: 8px 16px;
-        background-color: #007bff;
-        color: #fff;
         border: none;
         border-radius: 4px;
         cursor: pointer;
     }
 
-    button:hover {
-        background-color: #0056b3;
+    a {
+        text-decoration: none;
+        color: inherit;
     }
+
 </style>
