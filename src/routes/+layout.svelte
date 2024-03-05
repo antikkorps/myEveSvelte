@@ -4,7 +4,7 @@
 	import './styles.css';
 </script>
 
-<div class="app">
+<div class="app dark:bg-base-200 bg-slate-200">
 	<Header />
 
 	<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
