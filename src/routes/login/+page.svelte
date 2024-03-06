@@ -29,14 +29,6 @@
         }
     }
 
-	async function getInfoOnAuth(request: Request) {
-    if (isAuthenticated(request)) {
-        // User is authenticated, allow access to protected resources
-        console.log("User is authenticated and allowed to access protected resources" + request);
-    } else {
-        // User is not authenticated, redirect to login page or show error message
-    }
-}
 </script>
 
 <svelte:head>

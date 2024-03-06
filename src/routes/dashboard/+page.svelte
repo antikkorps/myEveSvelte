@@ -1,11 +1,13 @@
 <script context="module" lang="ts">
     import { isAuthenticated } from "../../services/auth";
     import type { Load } from '@sveltejs/kit';
-	import {getContext} from "svelte"
+</script>
 
-	const user = getContext('user');
+<script lang="ts">
+    import { getContext } from "svelte";
 
-	</script>
+    let user = getContext("user");
+</script>
 
 <svelte:head>
 	<title>Dashboard home</title>
