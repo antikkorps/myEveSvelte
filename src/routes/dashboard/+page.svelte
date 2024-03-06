@@ -1,6 +1,18 @@
 <script context="module" lang="ts">
     import { isAuthenticated } from "../../services/auth";
     import type { Load } from '@sveltejs/kit';
+
+	export async function load ({ session }: { session: any }) {
+		const user = session.user
+
+		if (!user){
+			return {
+				status: 302,
+				redirect: "/login"
+			}
+		}
+		return {}
+	}
 </script>
 
 <script lang="ts">

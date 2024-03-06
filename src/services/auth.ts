@@ -29,6 +29,5 @@ export async function handleLogin(username: string, password: string): Promise<b
 
 // Function to handle user logout
 export async function logout(): Promise<void> {
-	const cookie = '';
-	document.cookie = cookie;
+	document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
 }

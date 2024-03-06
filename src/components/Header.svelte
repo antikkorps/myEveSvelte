@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import {getContext} from "svelte"
 	import Toggle from '../components/Toggle.svelte'
+	import Logout from '../components/Logout.svelte';
 	import logo from '$lib/images/svelte-logo.svg';
 
 	const user = getContext('user');
@@ -36,10 +37,13 @@
 
 	<div class="flex flex-row justify-center">
 		{#if user}
-		<div class="avatar">
-			<div class="w-12 h-12 mx-2 my-3 rounded-full">
-			  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="avatar"/>
+		<div class="flex items-center justify-evenly px-3">
+			<div class="avatar">
+				<div class="w-12 h-12 mx-2 my-3 rounded-full">
+				<img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="avatar"/>
+				</div>
 			</div>
+			<Logout />
 		</div>
 		{:else}
 		<button class="hover:text-primary hover:bg-neutral-100 mx-3 my-3">
